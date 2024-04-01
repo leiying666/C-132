@@ -1,0 +1,39 @@
+#define _CRT_SECURE_NO_WARNINGS 1
+#include<string.h>
+#include<errno.h>
+#include<stdlib.h>
+#include<math.h>
+#include<stdio.h>
+
+int main()
+{
+	char a[101], b[101];
+	int i, j=0, k, h,t;
+	gets(a);
+	int len = strlen(a);
+	h = len / 2 - 1;
+	for (i = 0; i <= h; i++)
+	{
+		b[j++] = a[i];
+	}
+	j = 0;
+	for (i = len - 1; i > len - h - 1; i--)
+	{
+		if (a[i] == b[j++])
+		{
+			k = 1;
+		}
+		else
+		{
+			k = 0;
+		}
+	}
+	if (k)
+	{
+		printf("YES");
+	}
+	else
+	{
+		printf("NO");
+	}
+}
